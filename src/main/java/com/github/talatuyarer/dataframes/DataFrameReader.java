@@ -15,7 +15,7 @@
 * limitations under the License.
 */
 
-package com.github.talatuyarer;
+package com.github.talatuyarer.dataframes;
 
 import java.util.Map;
 
