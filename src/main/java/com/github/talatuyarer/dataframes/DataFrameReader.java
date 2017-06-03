@@ -33,8 +33,7 @@ public interface DataFrameReader {
 	 * @param source
 	 * @return
 	 */
-	
-	public DataFrameReader format(String source);
+	DataFrameReader format(String source);
 	
 	/**
 	 * Adds an input option for the underlying data source.
@@ -42,28 +41,25 @@ public interface DataFrameReader {
 	 * @param value
 	 * @return
 	 */
-	
-	public DataFrameReader option(String key, String value);
+	DataFrameReader option(String key, String value);
 	
 	/**
 	 * Adds input options for the underlying data source.
 	 * @param values
 	 * @return
 	 */
-	
-	public DataFrameReader options(Map<String,String> values);
+	DataFrameReader options(Map<String, String> values);
 	
 	/**
 	 * Loads input in as a `DataFrame`, for data sources that don't require a path
 	 * @return
 	 */
-	public DataFrame load();
+	DataFrame load();
 	
 	/**
 	 * Loads input in as a `DataFrame`, for data sources that require a path 
 	 * @return
 	 */
-	public DataFrame load(String path);	
-
+	DataFrame load(String path);
 
 }

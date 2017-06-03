@@ -23,3 +23,12 @@ hs_err_pid*
 /target/
 /.classpath
 /.project
+
+# Intellij IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Mac
+.DS_Store

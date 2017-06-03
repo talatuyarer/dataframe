@@ -19,15 +19,15 @@ package com.github.talatuyarer.dataframes;
 
 import java.util.List;
 
-public class ColumnTyped<E> implements Column {
-	
-	private Cell<E>[] cells;
-	
+public class TypedColumn<T> implements Column {
+
+	private Cell<T>[] cells;
+
 	private String name;
 	private DataType type;
-	
-	public ColumnTyped(String colName, List<E> values) {
-		name = colName;
+
+	public TypedColumn(String colName, List<T> values) {
+		this.name = colName;
 		values.toArray(cells);
 	}
 

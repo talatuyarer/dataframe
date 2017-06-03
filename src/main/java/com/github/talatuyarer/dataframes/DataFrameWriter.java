@@ -35,8 +35,7 @@ public interface DataFrameWriter {
 	 * default option, throw an exception at runtime.
 	 *
 	 */
-
-	public DataFrameWriter mode(String saveMode);
+	DataFrameWriter mode(String saveMode);
 
 	/**
 	 * Specifies the output data source format.
@@ -44,8 +43,7 @@ public interface DataFrameWriter {
 	 * @param source
 	 * @return
 	 */
-
-	public DataFrameWriter format(String source);
+	DataFrameWriter format(String source);
 
 	/**
 	 * Adds an output option for the underlying data source.
@@ -54,8 +52,7 @@ public interface DataFrameWriter {
 	 * @param value
 	 * @return
 	 */
-
-	public DataFrameWriter option(String key, String value);
+	DataFrameWriter option(String key, String value);
 
 	/**
 	 * Adds output options for the underlying data source.
@@ -63,21 +60,18 @@ public interface DataFrameWriter {
 	 * @param values
 	 * @return
 	 */
-
-	public DataFrameWriter options(Map<String, String> values);
+	DataFrameWriter options(Map<String, String> values);
 
 	/**
 	 * Saves the content of the `DataFrame` as the specified table.
-	 * 
-	 * @return
+	 *
 	 */
-	public void save();
+	void save();
 
 	/**
 	 * Saves the content of the `DataFrame` at the specified path.
-	 * 
-	 * @return
+	 *
 	 */
-	public void save(String path);
+	void save(String path);
 
 }
