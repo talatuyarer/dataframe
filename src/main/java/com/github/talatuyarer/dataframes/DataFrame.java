@@ -17,50 +17,157 @@
 
 package com.github.talatuyarer.dataframes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataFrame {
 	Column[] columns;
-	
-	private DataFrame(){}
-	
-	public DataFrame select(String... columns){
-		return null;
+
+	private DataFrame() {
 	}
-	
-	public DataFrame where(){
-		return null;
-	}
-	
+
+	/**
+	 * Displays the {@link DataFrame} in a tabular form.
+	 * 
+	 * @param numRows
+	 * @param truncate
+	 */
 	public void show(Integer numRows, Boolean truncate) {
 		// TODO Auto-generated method stub
 	}
-	
-	public void collect() {
-		// TODO Auto-generated method stub
 
-	}
-	
-	public void describe(String... cols){
-		
-	}
-	
-	public List<Column> first(){
+	/**
+	 * Returns an array that contains all of Rows in this DataFrame.
+	 */
+	public ArrayList<Row> collect() {
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	public List<Row> take(Integer n){
+
+	/**
+	 * Returns the first row.
+	 * 
+	 * @return
+	 */
+	public List<Column> first() {
 		return null;
 	}
-	
-	public static DataFrameReader read(){
+
+	/**
+	 * Returns the first n rows in the DataFrame.
+	 * 
+	 * @param n
+	 * @return
+	 */
+	public List<Row> take(Integer n) {
 		return null;
 	}
-	
-	public static DataFrameWriter write(){
+
+	/**
+	 * Returns a DataFrameReader which helps to create a DataFrame
+	 * 
+	 * @param n
+	 * @return
+	 */
+	public static DataFrameReader read() {
 		return null;
-	}	
-	
-	
+	}
+
+	/**
+	 * Returns a DataFrameWriter which helps to save a DataFrame to somewhere
+	 * 
+	 * @param n
+	 * @return
+	 */
+	public static DataFrameWriter write() {
+		return null;
+	}
+
+	/**
+	 * Returns all column names as an array.
+	 * 
+	 * @return
+	 */
+	public ArrayList<String> getColumns() {
+		return null;
+	}
+
+	/**
+	 * Returns a new DataFrame that contains only the unique rows from this
+	 * DataFrame.
+	 */
+	public DataFrame distinct() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * Returns a new DataFrame by taking the first n rows.
+	 * 
+	 * @return
+	 */
+	public DataFrame limit() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * Returns a new DataFrame sorted by the given expressions.
+	 * 
+	 * @return
+	 */
+	public DataFrame orderBy(Column... sortExprs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * Returns a new DataFrame by sampling a fraction of rows, using a random
+	 * seed.
+	 * 
+	 * @return
+	 */
+	public DataFrame sample(Boolean random, Double fraction) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * Selects a set of columns and return new dataframe
+	 * 
+	 * @param columns
+	 * @return
+	 */
+	public DataFrame select(String... columns) {
+		return null;
+	}
+
+	/**
+	 * Filters rows using the given SQL expression.
+	 * 
+	 * @return
+	 */
+	public DataFrame where(String condition) {
+		return null;
+	}
+
+	/**
+	 * Returns a new DataFrame by adding a column or replacing the existing
+	 * column that has the same name..
+	 * 
+	 * @return
+	 */
+	public DataFrame withColumn(String colName, Column col) {
+		return null;
+	}
+
+	/**
+	 * Returns a new DataFrame with a column renamed.
+	 * 
+	 * @return
+	 */
+	public DataFrame withColumnRenamed(String existingName, String newName) {
+		return null;
+	}
 
 }
