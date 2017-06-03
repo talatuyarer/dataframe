@@ -21,7 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataFrame {
-	Column[] columns;
+
+	private Column[] columns;
 
 	private DataFrame() {
 	}
@@ -65,8 +66,7 @@ public class DataFrame {
 
 	/**
 	 * Returns a DataFrameReader which helps to create a DataFrame
-	 * 
-	 * @param n
+	 *
 	 * @return
 	 */
 	public static DataFrameReader read() {
@@ -75,8 +75,7 @@ public class DataFrame {
 
 	/**
 	 * Returns a DataFrameWriter which helps to save a DataFrame to somewhere
-	 * 
-	 * @param n
+	 *
 	 * @return
 	 */
 	public static DataFrameWriter write() {
